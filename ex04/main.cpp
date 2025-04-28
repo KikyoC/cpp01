@@ -7,8 +7,6 @@
 void replace(std::string str, std::string origin, std::string next, std::ofstream &out)
 {
 	int j;
-	(void)origin;
-	(void)next;
 	for (int i = 0; str[i]; i++)
 	{
 		if (str[i] == origin[0])
