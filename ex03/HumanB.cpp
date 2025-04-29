@@ -14,6 +14,5 @@ void HumanB::setWeapon(Weapon &wp)
 
 void HumanB::attack()
 {
-	// std::cout << this->name << " attack with their " << (this->wp != NULL ? this->wp->getType() : "hands") << std::endl;
-	std::cout << this->name << " attack with their " << this->wp->getType() << std::endl;
+	std::cout << this->name << " attack with their " << (this->wp != NULL ? this->wp->getType() : "hands") << std::endl;
 }
