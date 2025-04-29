@@ -2,7 +2,10 @@
 #include <iostream>
 
 Harl::Harl() {
-
+	this->harl[0] = &Harl::debug;
+	this->harl[1] = &Harl::info;
+	this->harl[2] = &Harl::warning;
+	this->harl[3] = &Harl::error;
 }
 
 void Harl::debug()
@@ -27,5 +30,8 @@ void Harl::info()
 
 void Harl::complain(std::string level)
 {
-	
+	std::string lvls[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+	for (int i = 0; i < 4; i++)
+		if (lvls[i] == level)
+			(this->*harl[i])();
 }

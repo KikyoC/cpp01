@@ -10,4 +10,5 @@ class Harl
 		void info(void);
 		void warning(void);
 		void error(void);
+		void (Harl::*harl[4])();
 };
